@@ -3,10 +3,10 @@
 class HumanA
 {
     public:
-        HumanA::HumanA(std::string name, Weapon &weapon);
-        HumanA::~HumanA();
+        HumanA(std::string name, Weapon &weapon);
+        ~HumanA();
 
-        void attacks() const;
+        void attack() const;
     private:
         std::string _name;
         Weapon &_weapon;

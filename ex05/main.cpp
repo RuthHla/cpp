@@ -2,36 +2,12 @@
 
 int main()
 {
-    std::string input = "";
-    Harl test;
-    while(1)
-    {   
-        while(input.empty())
-        {
-            std::cout << "level available : DEBUG, INFO, WARNING, ERROR" << std::endl;
-            getline(std::cin, input);
-        }
-        switch(input)
-        {
-            case "DEBUG":
-                Harl.debug();
-                break;
-            case "INFO":
-                Harl.info();
-                break;
-            case "WARNING":
-                Harl.warning();
-                break;
-            case "ERROR":
-                Harl.error();
-                break;
-            
-            // case "complain": ??
+    Harl harl;
+    std::string level;
 
-            default:
-                std::cout << "level available : DEBUG, INFO, WARNING, ERROR" << std::endl;
-        }
-    }
+    std::cout << "Option available : DEBUG, INFO, WARNING, ERROR" << std::endl;
+    std::getline(std::cin, level);
 
+    harl.complain(level);
     return (0);
 }
